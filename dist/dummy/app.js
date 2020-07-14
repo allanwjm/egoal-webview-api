@@ -7,13 +7,8 @@ var dummyApp = {
     clearHistory: function () {
         notSupported("clearHistory()");
     },
-    getIMEI: function (index) {
-        if (index === undefined) {
-            return "DUMMY_IMEI";
-        }
-        else {
-            return "DUMMY_IMEI_" + index;
-        }
+    getIMEI: function () {
+        return "DUMMY_IMEI";
     },
     getSN: function () {
         return "DUMMY_SERIAL_NUMBER";

@@ -9,12 +9,8 @@ const dummyApp: App = {
     notSupported("clearHistory()");
   },
 
-  getIMEI(index?: number): string {
-    if (index === undefined) {
-      return "DUMMY_IMEI";
-    } else {
-      return `DUMMY_IMEI_${index}`;
-    }
+  getIMEI(): string {
+    return "DUMMY_IMEI";
   },
 
   getSN(): string {
@@ -44,7 +40,6 @@ const dummyApp: App = {
   restartApp() {
     window.location.reload();
   },
-
 };
 
 export default dummyApp;
