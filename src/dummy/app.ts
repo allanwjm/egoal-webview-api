@@ -10,15 +10,15 @@ const dummyApp: App = {
   },
 
   getIMEI(): string {
-    return "DUMMY_IMEI";
+    return "__IMEI__";
   },
 
   getSN(): string {
-    return "DUMMY_SERIAL_NUMBER";
+    return "__SERIAL_NUMBER__";
   },
 
-  getVersion(): string {
-    return "DUMMY_VERSION";
+  getAppVersion(): string {
+    return "__BROWSER__";
   },
 
   gotoUrl(url: string) {

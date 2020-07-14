@@ -8,13 +8,13 @@ var dummyApp = {
         notSupported("clearHistory()");
     },
     getIMEI: function () {
-        return "DUMMY_IMEI";
+        return "__IMEI__";
     },
     getSN: function () {
-        return "DUMMY_SERIAL_NUMBER";
+        return "__SERIAL_NUMBER__";
     },
-    getVersion: function () {
-        return "DUMMY_VERSION";
+    getAppVersion: function () {
+        return "__BROWSER__";
     },
     gotoUrl: function (url) {
         window.location.href = url;

@@ -15,7 +15,7 @@ export interface App {
    * 获取Webview app的版本号
    * @returns {string} 版本号
    */
-  getVersion(): string;
+  getAppVersion(): string;
 
   /**
    * 重启整个app（Android activity)
