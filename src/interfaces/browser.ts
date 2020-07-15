@@ -2,7 +2,7 @@ export interface BrowserInterface {
   /**
    * 刷新当前页面
    */
-  refresh();
+  reload();
 
   /**
    * 清除浏览器历史记录 (使返回键不再能返回上一页面)

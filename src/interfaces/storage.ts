@@ -2,13 +2,13 @@ export interface StorageInterface {
   /**
    * 清除保存的所有数据
    */
-  clearAll();
+  clear();
 
   /**
    * 清除一条数据
    * @param {string} key - 键
    */
-  clear(key: string);
+  remove(key: string);
 
   /**
    * 检查一条数据是否存在 (被设为空也视为存在)

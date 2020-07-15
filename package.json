@@ -1,6 +1,6 @@
 {
   "name": "egoal-webview-api",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Egoal webview app Javascript API",
   "main": "dist/index.js",
   "module": "dist/index.js",

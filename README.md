@@ -6,7 +6,7 @@
 API 以库的形式发布在 GitHub 上，可以通过 `npm` 或 `yarn` 直接以依赖形式安装，无需复制粘贴源文件，可直接导入。
 
 在以后的更新中会尽量保证同一大版本中的向后兼容。
-可以在路径后指定具体的版本，例如 `egoal-webview-api.git@1.0.0`。
+可以在路径后指定具体的版本，例如 `egoal-webview-api.git#1.0.0`。
 版本号与 git tag 对应，可以在 [tags 页面](https://github.com/allanwjm/egoal-webview-api/tags) 查找
 
 ```shell script
