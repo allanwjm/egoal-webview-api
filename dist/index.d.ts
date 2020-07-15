@@ -1,2 +1,24 @@
-import { App } from "./interfaces/app";
-export declare const app: App;
+import { AppInterface } from "./interfaces/app";
+import { BluetoothInterface } from "./interfaces/bluetooth";
+import { BrowserInterface } from "./interfaces/browser";
+import { CameraInterface } from "./interfaces/camera";
+import { LocationInterface } from "./interfaces/location";
+import { MessageInterface } from "./interfaces/message";
+import { StorageInterface } from "./interfaces/storage";
+export declare const app: AppInterface;
+export declare const bluetooth: BluetoothInterface;
+export declare const browser: BrowserInterface;
+export declare const camera: CameraInterface;
+export declare const location: LocationInterface;
+export declare const message: MessageInterface;
+export declare const storage: StorageInterface;
+declare const _default: {
+    app: AppInterface;
+    bluetooth: BluetoothInterface;
+    browser: BrowserInterface;
+    camera: CameraInterface;
+    location: LocationInterface;
+    message: MessageInterface;
+    storage: StorageInterface;
+};
+export default _default;
