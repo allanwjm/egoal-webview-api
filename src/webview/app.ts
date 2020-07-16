@@ -1,8 +1,8 @@
-import {AppInterface} from "../interfaces/app";
+import AppInterface from "../interfaces/app";
 
-const api = window["__WEBVIEW_API__"];
+const api = window["__WEBVIEW_API_APP__"];
 
-export const webviewApp: AppInterface = {
+const appApi: AppInterface = {
   isWebviewApp(): boolean {
     return true;
   },
@@ -17,6 +17,10 @@ export const webviewApp: AppInterface = {
 
   getAppVersion(): string {
     return api.getAppVersion();
+  },
+
+  getAppVersionCode(): number {
+    return api.getAppVersionCode();
   },
 
   restartApp() {
@@ -36,7 +40,7 @@ export const webviewApp: AppInterface = {
   },
 
   setBrightness(brightness: number) {
-    api.setBrightness();
+    api.setBrightness(brightness);
   },
 
   getVolume(): number {
@@ -47,3 +51,5 @@ export const webviewApp: AppInterface = {
     api.setVolume(volume);
   },
 };
+
+export default appApi;

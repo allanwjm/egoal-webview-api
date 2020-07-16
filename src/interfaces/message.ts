@@ -1,4 +1,4 @@
-export interface MessageInterface {
+export default interface MessageInterface {
   /**
    * 用法同 JavaScript alert(); 会调用 APP 内的弹窗而不是浏览器的弹窗
    * @param {*} message - 要显示的内容
@@ -20,7 +20,7 @@ export interface MessageInterface {
   prompt(message?: string, _default?: string): string;
 
   /**
-   * 显示底部弹出消息 (toast)，该消息同时只能显示一条
+   * 显示底部弹出消息 (toast), 该消息同时只能显示一条
    * @param {string} message - 要显示的消息
    */
   toast(message: string);

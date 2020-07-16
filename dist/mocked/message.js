@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.mockedMessage = void 0;
-exports.mockedMessage = {
+var mockedMessageApi = {
     alert: function (message) {
         console.debug("message.alert()");
         window.alert(message);
@@ -26,3 +25,4 @@ exports.mockedMessage = {
         alert("Beep!");
     },
 };
+exports.default = mockedMessageApi;

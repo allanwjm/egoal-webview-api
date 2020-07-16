@@ -1,3 +1,5 @@
-import {LocationInterface} from "../interfaces/location";
+import LocationInterface from "../interfaces/location";
 
-export const mockedLocation: LocationInterface = {};
+const mockedLocationApi: LocationInterface = {};
+
+export default mockedLocationApi;

@@ -1,6 +1,6 @@
-import {StorageInterface} from "../interfaces/storage";
+import StorageInterface from "../interfaces/storage";
 
-export const mockedStorage: StorageInterface = {
+const mockedStorageApi: StorageInterface = {
   clear() {
     console.debug("storage.clear()");
     window.localStorage.clear();
@@ -31,3 +31,5 @@ export const mockedStorage: StorageInterface = {
     window.localStorage.setItem(key, value);
   },
 };
+
+export default mockedStorageApi;

@@ -1,3 +1,3 @@
-export interface BluetoothInterface {
+export default interface BluetoothInterface {
   // TODO
 }

@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.webviewCamera = void 0;
-// @ts-ignore
-exports.webviewCamera = {};
+var api = window["__WEBVIEW_API_CAMERA__"];
+var cameraApi = {
+// TODO
+};
+exports.default = cameraApi;

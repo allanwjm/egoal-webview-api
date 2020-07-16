@@ -1,2 +1,3 @@
-import { StorageInterface } from "../interfaces/storage";
-export declare const mockedStorage: StorageInterface;
+import StorageInterface from "../interfaces/storage";
+declare const mockedStorageApi: StorageInterface;
+export default mockedStorageApi;

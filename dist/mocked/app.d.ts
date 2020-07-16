@@ -1,2 +1,3 @@
-import { AppInterface } from "../interfaces/app";
-export declare const mockedApp: AppInterface;
+import AppInterface from "../interfaces/app";
+declare const mockedAppApi: AppInterface;
+export default mockedAppApi;

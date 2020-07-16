@@ -1,6 +1,6 @@
-import {AppInterface} from "../interfaces/app";
+import AppInterface from "../interfaces/app";
 
-export const mockedApp: AppInterface = {
+const mockedAppApi: AppInterface = {
   isWebviewApp(): boolean {
     console.debug("app.isWebviewApp()");
     return false;
@@ -19,6 +19,11 @@ export const mockedApp: AppInterface = {
   getAppVersion(): string {
     console.debug("app.getAppVersion()");
     return "__MOCKED_VERSION__";
+  },
+
+  getAppVersionCode(): number {
+    console.debug("app.getAppVersionCode()");
+    return 0;
   },
 
   restartApp() {
@@ -54,3 +59,5 @@ export const mockedApp: AppInterface = {
     console.debug("app.setVolume()");
   },
 };
+
+export default mockedAppApi;

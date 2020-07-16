@@ -1,3 +1,5 @@
-import {BluetoothInterface} from "../interfaces/bluetooth";
+import BluetoothInterface from "../interfaces/bluetooth";
 
-export const mockedBluetooth: BluetoothInterface = {};
+const mockedBluetoothApi: BluetoothInterface = {};
+
+export default mockedBluetoothApi;

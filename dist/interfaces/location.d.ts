@@ -1,2 +1,2 @@
-export interface LocationInterface {
+export default interface LocationInterface {
 }

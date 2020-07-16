@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.mockedApp = void 0;
-exports.mockedApp = {
+var mockedAppApi = {
     isWebviewApp: function () {
         console.debug("app.isWebviewApp()");
         return false;
@@ -17,6 +16,10 @@ exports.mockedApp = {
     getAppVersion: function () {
         console.debug("app.getAppVersion()");
         return "__MOCKED_VERSION__";
+    },
+    getAppVersionCode: function () {
+        console.debug("app.getAppVersionCode()");
+        return 0;
     },
     restartApp: function () {
         console.debug("app.restartApp()");
@@ -45,3 +48,4 @@ exports.mockedApp = {
         console.debug("app.setVolume()");
     },
 };
+exports.default = mockedAppApi;

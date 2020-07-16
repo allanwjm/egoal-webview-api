@@ -1,4 +1,9 @@
-import {CameraInterface} from "../interfaces/camera";
+import CameraInterface from "../interfaces/camera";
 
-// @ts-ignore
-export const webviewCamera: CameraInterface = {};
+const api = window["__WEBVIEW_API_CAMERA__"];
+
+const cameraApi: CameraInterface = {
+  // TODO
+};
+
+export default cameraApi;

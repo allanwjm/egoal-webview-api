@@ -1,3 +1,3 @@
-export interface CameraInterface {
+export default interface CameraInterface {
   // TODO
 }

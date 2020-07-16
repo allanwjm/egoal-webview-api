@@ -1,4 +1,9 @@
-import {LocationInterface} from "../interfaces/location";
+import LocationInterface from "../interfaces/location";
 
-// @ts-ignore
-export const webviewLocation: LocationInterface = {};
+const api = window["__WEBVIEW_API_LOCATION__"];
+
+const locationApi: LocationInterface = {
+  // TODO
+};
+
+export default locationApi;

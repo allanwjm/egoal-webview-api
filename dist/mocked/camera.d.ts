@@ -1,2 +1,3 @@
-import { CameraInterface } from "../interfaces/camera";
-export declare const mockedCamera: CameraInterface;
+import CameraInterface from "../interfaces/camera";
+declare const mockedCameraApi: CameraInterface;
+export default mockedCameraApi;

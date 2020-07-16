@@ -21,11 +21,11 @@ yarn upgrade https://github.com/allanwjm/egoal-webview-api.git
 ```javascript
 // 可以整体导入
 import api from "egoal-webview-api/dist";
-const sn = api.app.getSerialNumber();
+const sn = api.appApi.getSerialNumber();
 
 // 或单独导入
-import {app} from "egoal-webview-api/dist";
-const sn = app.getSerialNumber();
+import {appApi} from "egoal-webview-api/dist";
+const sn = appApi.getSerialNumber();
 ```
 
 ### 接口文档

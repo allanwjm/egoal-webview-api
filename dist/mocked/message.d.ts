@@ -1,2 +1,3 @@
-import { MessageInterface } from "../interfaces/message";
-export declare const mockedMessage: MessageInterface;
+import MessageInterface from "../interfaces/message";
+declare const mockedMessageApi: MessageInterface;
+export default mockedMessageApi;

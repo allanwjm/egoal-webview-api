@@ -1,2 +1,3 @@
-import { StorageInterface } from "../interfaces/storage";
-export declare const webviewStorage: StorageInterface;
+import StorageInterface from "../interfaces/storage";
+declare const storageApi: StorageInterface;
+export default storageApi;

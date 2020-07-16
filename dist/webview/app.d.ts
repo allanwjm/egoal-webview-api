@@ -1,2 +1,3 @@
-import { AppInterface } from "../interfaces/app";
-export declare const webviewApp: AppInterface;
+import AppInterface from "../interfaces/app";
+declare const appApi: AppInterface;
+export default appApi;

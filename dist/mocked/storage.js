@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.mockedStorage = void 0;
-exports.mockedStorage = {
+var mockedStorageApi = {
     clear: function () {
         console.debug("storage.clear()");
         window.localStorage.clear();
@@ -29,3 +28,4 @@ exports.mockedStorage = {
         window.localStorage.setItem(key, value);
     },
 };
+exports.default = mockedStorageApi;

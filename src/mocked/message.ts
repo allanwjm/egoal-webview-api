@@ -1,7 +1,6 @@
-import {MessageInterface} from "../interfaces/message";
+import MessageInterface from "../interfaces/message";
 
-export const mockedMessage: MessageInterface = {
-
+const mockedMessageApi: MessageInterface = {
   alert(message?) {
     console.debug("message.alert()");
     window.alert(message);
@@ -31,3 +30,5 @@ export const mockedMessage: MessageInterface = {
     alert("Beep!");
   },
 };
+
+export default mockedMessageApi;

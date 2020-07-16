@@ -1,2 +1,3 @@
-import { CameraInterface } from "../interfaces/camera";
-export declare const webviewCamera: CameraInterface;
+import CameraInterface from "../interfaces/camera";
+declare const cameraApi: CameraInterface;
+export default cameraApi;

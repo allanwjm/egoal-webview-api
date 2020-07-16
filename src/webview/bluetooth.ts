@@ -1,4 +1,9 @@
-import {BluetoothInterface} from "../interfaces/bluetooth";
+import BluetoothInterface from "../interfaces/bluetooth";
 
-// @ts-ignore
-export const webviewBluetooth: BluetoothInterface = {};
+const api = window["__WEBVIEW_API_BLUETOOTH__"];
+
+const bluetoothApi: BluetoothInterface = {
+  // TODO
+};
+
+export default bluetoothApi;

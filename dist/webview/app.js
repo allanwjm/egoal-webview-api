@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.webviewApp = void 0;
-var api = window["__WEBVIEW_API__"];
-exports.webviewApp = {
+var api = window["__WEBVIEW_API_APP__"];
+var appApi = {
     isWebviewApp: function () {
         return true;
     },
@@ -14,6 +13,9 @@ exports.webviewApp = {
     },
     getAppVersion: function () {
         return api.getAppVersion();
+    },
+    getAppVersionCode: function () {
+        return api.getAppVersionCode();
     },
     restartApp: function () {
         api.restartApp();
@@ -28,7 +30,7 @@ exports.webviewApp = {
         return api.getBrightness();
     },
     setBrightness: function (brightness) {
-        api.setBrightness();
+        api.setBrightness(brightness);
     },
     getVolume: function () {
         return api.getVolume();
@@ -37,3 +39,4 @@ exports.webviewApp = {
         api.setVolume(volume);
     },
 };
+exports.default = appApi;
