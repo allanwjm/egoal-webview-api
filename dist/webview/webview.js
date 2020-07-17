@@ -11,14 +11,5 @@ var webViewApi = {
     gotoUrl: function (url) {
         api.gotoUrl(url);
     },
-    gotoLandingPage: function () {
-        api.gotoLandingPage();
-    },
-    gotoSettingPage: function () {
-        api.gotoSettingPage();
-    },
-    gotoDemoPage: function () {
-        api.gotoDemoPage();
-    },
 };
 exports.default = webViewApi;

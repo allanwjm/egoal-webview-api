@@ -1,3 +1,4 @@
+import EgoalWebviewApi from "./egoal-webview-api";
 import AppInterface from "./interfaces/app";
 import BluetoothInterface from "./interfaces/bluetooth";
 import CameraInterface from "./interfaces/camera";
@@ -30,7 +31,7 @@ export const messageApi: MessageInterface = isApp ? message : mockedMessage;
 export const storageApi: StorageInterface = isApp ? storage : mockedStorage;
 export const webviewApi: BrowserInterface = isApp ? webview : mockedWebview;
 
-export default {
+const api: EgoalWebviewApi = {
   appApi,
   bluetoothApi,
   cameraApi,
@@ -39,3 +40,5 @@ export default {
   storageApi,
   webviewApi,
 };
+
+export default api;

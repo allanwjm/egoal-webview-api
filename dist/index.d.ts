@@ -1,3 +1,4 @@
+import EgoalWebviewApi from "./egoal-webview-api";
 import AppInterface from "./interfaces/app";
 import BluetoothInterface from "./interfaces/bluetooth";
 import CameraInterface from "./interfaces/camera";
@@ -12,13 +13,5 @@ export declare const locationApi: LocationInterface;
 export declare const messageApi: MessageInterface;
 export declare const storageApi: StorageInterface;
 export declare const webviewApi: BrowserInterface;
-declare const _default: {
-    appApi: AppInterface;
-    bluetoothApi: BluetoothInterface;
-    cameraApi: CameraInterface;
-    locationApi: LocationInterface;
-    messageApi: MessageInterface;
-    storageApi: StorageInterface;
-    webviewApi: BrowserInterface;
-};
-export default _default;
+declare const api: EgoalWebviewApi;
+export default api;

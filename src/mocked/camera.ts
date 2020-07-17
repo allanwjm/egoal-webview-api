@@ -1,5 +1,7 @@
 import CameraInterface from "../interfaces/camera";
 
-const mockedCameraApi: CameraInterface = {};
+const mockedCameraApi: CameraInterface = {
+  // TODO
+};
 
 export default mockedCameraApi;

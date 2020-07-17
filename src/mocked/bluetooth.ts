@@ -1,5 +1,7 @@
 import BluetoothInterface from "../interfaces/bluetooth";
 
-const mockedBluetoothApi: BluetoothInterface = {};
+const mockedBluetoothApi: BluetoothInterface = {
+  // TODO
+};
 
 export default mockedBluetoothApi;

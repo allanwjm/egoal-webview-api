@@ -1,5 +1,7 @@
 import LocationInterface from "../interfaces/location";
 
-const mockedLocationApi: LocationInterface = {};
+const mockedLocationApi: LocationInterface = {
+  // TODO
+};
 
 export default mockedLocationApi;

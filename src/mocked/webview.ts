@@ -15,18 +15,6 @@ const mockedWebviewApi: WebviewInterface = {
     window.location.href = url;
     console.debug(`webviewApi.gotoUrl(${url})`);
   },
-
-  gotoLandingPage() {
-    this.gotoUrl("/#/");
-  },
-
-  gotoSettingPage() {
-    this.gotoUrl("/#/setting");
-  },
-
-  gotoDemoPage() {
-    this.gotoUrl("/#/demo");
-  },
 };
 
 export default mockedWebviewApi;

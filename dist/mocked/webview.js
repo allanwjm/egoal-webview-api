@@ -13,14 +13,5 @@ var mockedWebviewApi = {
         window.location.href = url;
         console.debug("webviewApi.gotoUrl(" + url + ")");
     },
-    gotoLandingPage: function () {
-        this.gotoUrl("/#/");
-    },
-    gotoSettingPage: function () {
-        this.gotoUrl("/#/setting");
-    },
-    gotoDemoPage: function () {
-        this.gotoUrl("/#/demo");
-    },
 };
 exports.default = mockedWebviewApi;

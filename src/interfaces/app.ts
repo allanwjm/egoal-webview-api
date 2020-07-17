@@ -1,4 +1,8 @@
+/**
+ * 系统与 APP 相关功能接口。
+ */
 export default interface AppInterface {
+
   /**
    * 检查运行环境是否是 Egoal Webview APP。
    * @returns {boolean}
@@ -6,65 +10,72 @@ export default interface AppInterface {
   isWebviewApp(): boolean
 
   /**
-   * 获取设备的 IMEI 码。如果获取失败, 将会返回 null。
+   * 获取设备的 IMEI 码。
+   * 如果无法获取 (如系统版本或权限问题), 返回 null。
+   * (!) 该方法返回的识别码可能因网络情况变化而变化。
    * @returns {string} IMEI
    */
   getIMEI(): string;
 
   /**
-   * 获取设备的序列号 (Serial Number)。如果获取失败, 将会返回 null。
+   * 获取设备的序列号 (Serial Number)。
+   * 如果无法获取 (如系统版本或权限问题), 返回 null。
    * @returns {string} 序列号
    */
   getSerialNumber(): string;
 
   /**
-   * 获取 APP 的版本号 (例如 "1.0.0")
+   * 获取当前 Android APP 的版本号, 字符串形式 (例如 "1.0.0")。
    * @returns {string} 版本号
    */
   getAppVersion(): string;
 
   /**
-   * 获取 APP 的版本号 (数字形式)
+   * 获取当前 Android APP 的版本号, 数字形式 (例如 5)。
    * @returns {number} 版本号
    */
   getAppVersionCode(): number;
 
   /**
-   * 重启 APP (重新载入 Android activity)
+   * 重启 APP (重新载入整个 Android activity)。
    */
-  restartApp();
+  restartApp(): void;
 
   /**
-   * 进入锁屏状态, 阻止用户切出 APP
+   * 进入锁屏状态, 阻止用户切换应用。
    */
-  lockScreen();
+  lockScreen(): void;
 
   /**
-   * 解除锁屏状态
+   * 解除锁屏状态。
    */
-  unlockScreen();
+  unlockScreen(): void;
 
   /**
-   * 获取当前屏幕亮度
-   * @returns {number} - 屏幕亮度 (TODO: 取值范围)
+   * 获取当前屏幕亮度。
+   * TODO: 该功能尚未实现。
+   * @returns {number} - 屏幕亮度
    */
   getBrightness(): number;
 
   /**
-   * 设置屏幕亮度
-   * @param {number} brightness - 要设置的屏幕亮度 (TODO: 取值范围)
+   * 设置屏幕亮度。
+   * TODO: 该功能尚未实现。
+   * @param {number} brightness - 要设置的屏幕亮度
    */
-  setBrightness(brightness: number);
+  setBrightness(brightness: number): void;
 
   /**
-   * 获取当前音量
-   * @returns {number} - 音量 (TODO: 取值范围)
+   * 获取当前音量。
+   * TODO: 该功能尚未实现。
+   * @returns {number} - 音量
    */
   getVolume(): number;
 
   /**
-   * 设置音量
-   * @param {number} volume - 要设置的音量 (TODO: 取值范围)
+   * 设置音量。
+   * TODO: 该功能尚未实现。
+   * @param {number} volume - 要设置的音量
    */
-  setVolume(volume: number);
+  setVolume(volume: number): void;
 }

@@ -26,7 +26,7 @@ exports.locationApi = isApp ? location_2.default : location_1.default;
 exports.messageApi = isApp ? message_2.default : message_1.default;
 exports.storageApi = isApp ? storage_2.default : storage_1.default;
 exports.webviewApi = isApp ? webview_2.default : webview_1.default;
-exports.default = {
+var api = {
     appApi: exports.appApi,
     bluetoothApi: exports.bluetoothApi,
     cameraApi: exports.cameraApi,
@@ -35,3 +35,4 @@ exports.default = {
     storageApi: exports.storageApi,
     webviewApi: exports.webviewApi,
 };
+exports.default = api;

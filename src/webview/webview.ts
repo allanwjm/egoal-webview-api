@@ -14,18 +14,6 @@ const webViewApi: WebviewInterface = {
   gotoUrl(url: string) {
     api.gotoUrl(url);
   },
-
-  gotoLandingPage() {
-    api.gotoLandingPage();
-  },
-
-  gotoSettingPage() {
-    api.gotoSettingPage();
-  },
-
-  gotoDemoPage() {
-    api.gotoDemoPage();
-  },
 };
 
 export default webViewApi;
