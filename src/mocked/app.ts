@@ -2,61 +2,67 @@ import AppInterface from "../interfaces/app";
 
 const mockedAppApi: AppInterface = {
   isWebviewApp(): boolean {
-    console.debug("app.isWebviewApp()");
+    console.debug(`appApi.isWebviewApp(): ${false}`);
     return false;
   },
 
   getIMEI(): string {
-    console.debug("app.getIMEI()");
-    return "__MOCKED_IMEI__";
+    const imei = "__MOCKED_IMEI__";
+    console.debug(`appApi.getIMEI(): ${imei}`);
+    return imei;
   },
 
   getSerialNumber(): string {
-    console.debug("app.getSerialNumber()");
-    return "__MOCKED_SN__";
+    const sn = "__MOCKED_SN__";
+    console.debug(`appApi.getSerialNumber(): ${sn}`);
+    return sn;
   },
 
   getAppVersion(): string {
-    console.debug("app.getAppVersion()");
-    return "__MOCKED_VERSION__";
+    const version = "__MOCKED_VERSION__";
+    console.debug(`appApi.getAppVersion(): ${version}`);
+    return version;
   },
 
   getAppVersionCode(): number {
-    console.debug("app.getAppVersionCode()");
-    return 0;
+    const version = 0;
+    console.debug(`appApi.getAppVersionCode(): ${version}`);
+    return version;
   },
 
   restartApp() {
-    console.debug("app.restartApp()");
-    alert("Mocked: 重启 APP");
+    alert("Mocked: restartApp()");
+    console.debug("appApi.restartApp()");
   },
 
   lockScreen() {
-    console.debug("app.lockScreen()");
-    alert("Mocked: 锁屏");
+    alert("Mocked: lockScreen()");
+    console.debug("appApi.lockScreen()");
   },
 
   unlockScreen() {
-    console.debug("app.unlockScreen()");
-    alert("Mocked: 解锁屏幕");
+    alert("Mocked: unlockScreen()");
+    console.debug("appApi.unlockScreen()");
   },
 
   getBrightness(): number {
-    console.debug("app.getBrightness()");
-    return -1;
+    const brightness = 0;
+    console.debug(`appApi.getBrightness(): ${brightness}`);
+    return brightness;
   },
 
   setBrightness(brightness: number) {
-    console.debug("app.setBrightness()");
+    console.debug(`appApi.setBrightness(${brightness})`);
   },
 
   getVolume(): number {
-    console.debug("app.getVolume");
-    return -1;
+    const volume = 0;
+    console.debug(`appApi.getVolume(): ${volume}`);
+    return volume;
   },
 
   setVolume(volume: number) {
-    console.debug("app.setVolume()");
+    console.debug(`appApi.setVolume(${volume})`);
   },
 };
 

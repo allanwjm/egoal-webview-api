@@ -2,33 +2,37 @@ import StorageInterface from "../interfaces/storage";
 
 const mockedStorageApi: StorageInterface = {
   clear() {
-    console.debug("storage.clear()");
     window.localStorage.clear();
+    console.debug("storageApi.clear()");
   },
 
   remove(key: string) {
-    console.debug("storage.remove()");
     window.localStorage.removeItem(key);
+    console.debug(`storageApi.remove(${key})`);
   },
 
   exists(key: string): boolean {
-    console.debug("storage.exists()");
-    return window.localStorage.getItem(key) !== null;
+    const result = window.localStorage.getItem(key) !== null;
+    console.debug(`storageApi.exists(${key}): ${result}`);
+    return result;
   },
 
   get(key: string, _default?: string): string {
-    console.debug("storage.get()");
-    const value = window.localStorage.getItem(key);
+    let value = window.localStorage.getItem(key);
     if (value === null) {
-      return _default;
-    } else {
-      return value;
+      value = _default;
     }
+    if (_default === undefined) {
+      console.debug(`storageApi.get(${key}): ${value}`);
+    } else {
+      console.debug(`storageApi.get(${key}, ${_default}): ${value}`);
+    }
+    return value;
   },
 
   set(key: string, value: string) {
-    console.debug("storage.set()");
     window.localStorage.setItem(key, value);
+    console.debug(`storageApi.set(${key}, ${value})`);
   },
 };
 

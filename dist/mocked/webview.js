@@ -2,27 +2,24 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var mockedWebviewApi = {
     reload: function () {
-        console.debug("browser.refresh()");
         window.location.reload();
+        console.debug("webviewApi.refresh()");
     },
     clearHistory: function () {
-        console.debug("browser.clearHistory()");
-        console.error("浏览器中不支持清除历史记录");
+        console.error("在浏览器中不支持清除历史记录!");
+        console.debug("webviewApi.clearHistory()");
     },
     gotoUrl: function (url) {
-        console.debug("browser.gotoUrl()");
         window.location.href = url;
+        console.debug("webviewApi.gotoUrl(" + url + ")");
     },
     gotoLandingPage: function () {
-        console.debug("browser.gotoLandingPage()");
         this.gotoUrl("/#/");
     },
     gotoSettingPage: function () {
-        console.debug("browser.gotoSettingPage()");
         this.gotoUrl("/#/setting");
     },
     gotoDemoPage: function () {
-        console.debug("browser.gotoSettingPage()");
         this.gotoUrl("/#/demo");
     },
 };

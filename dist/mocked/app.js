@@ -2,50 +2,56 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var mockedAppApi = {
     isWebviewApp: function () {
-        console.debug("app.isWebviewApp()");
+        console.debug("appApi.isWebviewApp(): " + false);
         return false;
     },
     getIMEI: function () {
-        console.debug("app.getIMEI()");
-        return "__MOCKED_IMEI__";
+        var imei = "__MOCKED_IMEI__";
+        console.debug("appApi.getIMEI(): " + imei);
+        return imei;
     },
     getSerialNumber: function () {
-        console.debug("app.getSerialNumber()");
-        return "__MOCKED_SN__";
+        var sn = "__MOCKED_SN__";
+        console.debug("appApi.getSerialNumber(): " + sn);
+        return sn;
     },
     getAppVersion: function () {
-        console.debug("app.getAppVersion()");
-        return "__MOCKED_VERSION__";
+        var version = "__MOCKED_VERSION__";
+        console.debug("appApi.getAppVersion(): " + version);
+        return version;
     },
     getAppVersionCode: function () {
-        console.debug("app.getAppVersionCode()");
-        return 0;
+        var version = 0;
+        console.debug("appApi.getAppVersionCode(): " + version);
+        return version;
     },
     restartApp: function () {
-        console.debug("app.restartApp()");
-        alert("Mocked: 重启 APP");
+        alert("Mocked: restartApp()");
+        console.debug("appApi.restartApp()");
     },
     lockScreen: function () {
-        console.debug("app.lockScreen()");
-        alert("Mocked: 锁屏");
+        alert("Mocked: lockScreen()");
+        console.debug("appApi.lockScreen()");
     },
     unlockScreen: function () {
-        console.debug("app.unlockScreen()");
-        alert("Mocked: 解锁屏幕");
+        alert("Mocked: unlockScreen()");
+        console.debug("appApi.unlockScreen()");
     },
     getBrightness: function () {
-        console.debug("app.getBrightness()");
-        return -1;
+        var brightness = 0;
+        console.debug("appApi.getBrightness(): " + brightness);
+        return brightness;
     },
     setBrightness: function (brightness) {
-        console.debug("app.setBrightness()");
+        console.debug("appApi.setBrightness(" + brightness + ")");
     },
     getVolume: function () {
-        console.debug("app.getVolume");
-        return -1;
+        var volume = 0;
+        console.debug("appApi.getVolume(): " + volume);
+        return volume;
     },
     setVolume: function (volume) {
-        console.debug("app.setVolume()");
+        console.debug("appApi.setVolume(" + volume + ")");
     },
 };
 exports.default = mockedAppApi;

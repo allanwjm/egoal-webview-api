@@ -2,27 +2,34 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var mockedMessageApi = {
     alert: function (message) {
-        console.debug("message.alert()");
         window.alert(message);
+        console.debug("messageApi.alert(" + message + ")");
     },
     confirm: function (message) {
-        console.debug("message.confirm()");
-        return window.confirm(message);
+        var result = window.confirm(message);
+        console.debug("messageApi.confirm(" + message + "): " + result);
+        return result;
     },
     prompt: function (message, _default) {
-        console.debug("message.prompt()");
-        return window.prompt(message, _default);
+        var result = window.prompt(message, _default);
+        if (_default === undefined) {
+            console.debug("messageApi.prompt(" + message + "): " + result);
+        }
+        else {
+            console.debug("messageApi.prompt(" + message + ", " + _default + "): " + result);
+        }
+        return result;
     },
     toast: function (message) {
-        console.debug("message.toast()");
         window.alert("[Toast]\n" + message);
+        console.debug("messageApi.toast(" + message + ")");
     },
     dismissToast: function () {
-        console.debug("message.dismissToast()");
+        console.debug("messageApi.dismissToast()");
     },
     beep: function () {
-        console.debug("message.beep()");
-        alert("Beep!");
+        alert("*Beep!");
+        console.debug("messageApi.beep()");
     },
 };
 exports.default = mockedMessageApi;

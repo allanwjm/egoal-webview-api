@@ -2,32 +2,38 @@ import MessageInterface from "../interfaces/message";
 
 const mockedMessageApi: MessageInterface = {
   alert(message?) {
-    console.debug("message.alert()");
     window.alert(message);
+    console.debug(`messageApi.alert(${message})`);
   },
 
   confirm(message?: string): boolean {
-    console.debug("message.confirm()");
-    return window.confirm(message);
+    const result = window.confirm(message);
+    console.debug(`messageApi.confirm(${message}): ${result}`);
+    return result;
   },
 
   prompt(message?: string, _default?: string): string {
-    console.debug("message.prompt()");
-    return window.prompt(message, _default);
+    const result = window.prompt(message, _default);
+    if (_default === undefined) {
+      console.debug(`messageApi.prompt(${message}): ${result}`);
+    } else {
+      console.debug(`messageApi.prompt(${message}, ${_default}): ${result}`);
+    }
+    return result;
   },
 
   toast(message: string) {
-    console.debug("message.toast()");
     window.alert("[Toast]\n" + message);
+    console.debug(`messageApi.toast(${message})`);
   },
 
   dismissToast() {
-    console.debug("message.dismissToast()");
+    console.debug("messageApi.dismissToast()");
   },
 
   beep() {
-    console.debug("message.beep()");
-    alert("Beep!");
+    alert("*Beep!");
+    console.debug("messageApi.beep()");
   },
 };
 
