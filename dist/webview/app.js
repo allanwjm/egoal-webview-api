@@ -38,5 +38,8 @@ var appApi = {
     setVolume: function (volume) {
         api.setVolume(volume);
     },
+    setStatusBarColor: function (color) {
+        api.setStatusBarColor(color);
+    },
 };
 exports.default = appApi;

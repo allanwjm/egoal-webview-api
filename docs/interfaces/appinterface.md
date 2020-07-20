@@ -22,6 +22,7 @@
 * [lockScreen](appinterface.md#lockscreen)
 * [restartApp](appinterface.md#restartapp)
 * [setBrightness](appinterface.md#setbrightness)
+* [setStatusBarColor](appinterface.md#setstatusbarcolor)
 * [setVolume](appinterface.md#setvolume)
 * [unlockScreen](appinterface.md#unlockscreen)
 
@@ -146,6 +147,22 @@ TODO: 该功能尚未实现。
 Name | Type | Description |
 ------ | ------ | ------ |
 `brightness` | number | 要设置的屏幕亮度  |
+
+**Returns:** *void*
+
+___
+
+###  setStatusBarColor
+
+▸ **setStatusBarColor**(`color`: string): *void*
+
+设置 APP 顶部状态栏的颜色。(时钟、信号显示区域的背景颜色)
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`color` | string | 要设置的颜色字符串, 如 "#ff0000"  |
 
 **Returns:** *void*
 

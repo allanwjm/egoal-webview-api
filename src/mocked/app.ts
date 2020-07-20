@@ -64,6 +64,10 @@ const mockedAppApi: AppInterface = {
   setVolume(volume: number) {
     console.debug(`appApi.setVolume(${volume})`);
   },
+
+  setStatusBarColor(color: string) {
+    console.debug(`appApi.setStatusBarColor(${color})`);
+  }
 };
 
 export default mockedAppApi;

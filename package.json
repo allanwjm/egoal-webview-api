@@ -1,6 +1,6 @@
 {
   "name": "egoal-webview-api",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Egoal webview app Javascript API",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -14,9 +14,15 @@
     "build:docs": "rimraf docs && typedoc --mode file --readme none --plugin typedoc-plugin-markdown --hideSources src/egoal-webview-api.ts"
   },
   "devDependencies": {
+    "husky": "^4.2.5",
     "rimraf": "^3.0.2",
     "typedoc": "^0.17.8",
     "typedoc-plugin-markdown": "^2.3.1",
     "typescript": "^3.9.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build && git add ."
+    }
   }
 }

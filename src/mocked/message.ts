@@ -23,7 +23,7 @@ const mockedMessageApi: MessageInterface = {
   },
 
   toast(message: string) {
-    window.alert("[Toast]\n" + message);
+    console.log(`[Toast]: "${message}"`);
     console.debug(`messageApi.toast(${message})`);
   },
 
@@ -32,7 +32,7 @@ const mockedMessageApi: MessageInterface = {
   },
 
   beep() {
-    alert("*Beep!");
+    console.log("[Beep]");
     console.debug("messageApi.beep()");
   },
 };

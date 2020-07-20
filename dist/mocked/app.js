@@ -53,5 +53,8 @@ var mockedAppApi = {
     setVolume: function (volume) {
         console.debug("appApi.setVolume(" + volume + ")");
     },
+    setStatusBarColor: function (color) {
+        console.debug("appApi.setStatusBarColor(" + color + ")");
+    }
 };
 exports.default = mockedAppApi;

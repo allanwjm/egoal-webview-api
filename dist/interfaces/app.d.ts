@@ -66,4 +66,9 @@ export default interface AppInterface {
      * @param {number} volume - 要设置的音量
      */
     setVolume(volume: number): void;
+    /**
+     * 设置 APP 顶部状态栏的颜色。(时钟、信号显示区域的背景颜色)
+     * @param {string} color - 要设置的颜色字符串, 如 "#ff0000"
+     */
+    setStatusBarColor(color: string): void;
 }

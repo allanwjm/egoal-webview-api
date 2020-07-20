@@ -50,6 +50,10 @@ const appApi: AppInterface = {
   setVolume(volume: number) {
     api.setVolume(volume);
   },
+
+  setStatusBarColor(color: string) {
+    api.setStatusBarColor(color);
+  },
 };
 
 export default appApi;

@@ -21,14 +21,14 @@ var mockedMessageApi = {
         return result;
     },
     toast: function (message) {
-        window.alert("[Toast]\n" + message);
+        console.log("[Toast]: \"" + message + "\"");
         console.debug("messageApi.toast(" + message + ")");
     },
     dismissToast: function () {
         console.debug("messageApi.dismissToast()");
     },
     beep: function () {
-        alert("*Beep!");
+        console.log("[Beep]");
         console.debug("messageApi.beep()");
     },
 };
