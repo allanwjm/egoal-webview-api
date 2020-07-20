@@ -7,11 +7,11 @@ import StorageInterface from "./interfaces/storage";
 import WebviewInterface from "./interfaces/webview";
 
 export default interface EgoalWebviewApi {
-  appApi: AppInterface;
-  bluetoothApi: BluetoothInterface;
-  cameraApi: CameraInterface;
-  locationApi: LocationInterface;
-  messageApi: MessageInterface;
-  storageApi: StorageInterface;
-  webviewApi: WebviewInterface;
+  app: AppInterface;
+  bluetooth: BluetoothInterface;
+  camera: CameraInterface;
+  location: LocationInterface;
+  message: MessageInterface;
+  storage: StorageInterface;
+  webview: WebviewInterface;
 }

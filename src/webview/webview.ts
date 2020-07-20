@@ -1,10 +1,11 @@
 import WebviewInterface from "../interfaces/webview";
 
-const api = window["__WEBVIEW_API_WEBVIEW__"];
+declare const __WEBVIEW_API_WEBVIEW__: WebviewInterface & {};
+const api = __WEBVIEW_API_WEBVIEW__;
 
 const webViewApi: WebviewInterface = {
   reload() {
-    window.location.reload();
+    api.reload();
   },
 
   clearHistory() {

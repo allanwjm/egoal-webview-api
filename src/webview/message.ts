@@ -1,6 +1,7 @@
 import MessageInterface from "../interfaces/message";
 
-const api = window["__WEBVIEW_API_MESSAGE__"];
+declare const __WEBVIEW_API_MESSAGE__: MessageInterface & {};
+const api = __WEBVIEW_API_MESSAGE__;
 
 const messageApi: MessageInterface = {
   alert: window.alert,

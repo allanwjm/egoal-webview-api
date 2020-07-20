@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var api = window["__WEBVIEW_API_APP__"];
+var api = __WEBVIEW_API_APP__;
 var appApi = {
     isWebviewApp: function () {
         return true;

@@ -1,6 +1,7 @@
 import BluetoothInterface from "../interfaces/bluetooth";
 
-const api = window["__WEBVIEW_API_BLUETOOTH__"];
+declare const __WEBVIEW_API_BLUETOOTH__: BluetoothInterface;
+const api = __WEBVIEW_API_BLUETOOTH__;
 
 const bluetoothApi: BluetoothInterface = {
   // TODO

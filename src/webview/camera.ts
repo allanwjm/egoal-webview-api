@@ -1,6 +1,7 @@
 import CameraInterface from "../interfaces/camera";
 
-const api = window["__WEBVIEW_API_CAMERA__"];
+declare const __WEBVIEW_API_CAMERA__: CameraInterface;
+const api = __WEBVIEW_API_CAMERA__;
 
 const cameraApi: CameraInterface = {
   // TODO

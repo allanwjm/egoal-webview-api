@@ -10,52 +10,52 @@
 
 ### Properties
 
-* [appApi](egoalwebviewapi.md#appapi)
-* [bluetoothApi](egoalwebviewapi.md#bluetoothapi)
-* [cameraApi](egoalwebviewapi.md#cameraapi)
-* [locationApi](egoalwebviewapi.md#locationapi)
-* [messageApi](egoalwebviewapi.md#messageapi)
-* [storageApi](egoalwebviewapi.md#storageapi)
-* [webviewApi](egoalwebviewapi.md#webviewapi)
+* [app](egoalwebviewapi.md#app)
+* [bluetooth](egoalwebviewapi.md#bluetooth)
+* [camera](egoalwebviewapi.md#camera)
+* [location](egoalwebviewapi.md#location)
+* [message](egoalwebviewapi.md#message)
+* [storage](egoalwebviewapi.md#storage)
+* [webview](egoalwebviewapi.md#webview)
 
 ## Properties
 
-###  appApi
+###  app
 
-• **appApi**: *[AppInterface](appinterface.md)*
-
-___
-
-###  bluetoothApi
-
-• **bluetoothApi**: *[BluetoothInterface](bluetoothinterface.md)*
+• **app**: *[AppInterface](appinterface.md)*
 
 ___
 
-###  cameraApi
+###  bluetooth
 
-• **cameraApi**: *[CameraInterface](camerainterface.md)*
-
-___
-
-###  locationApi
-
-• **locationApi**: *[LocationInterface](locationinterface.md)*
+• **bluetooth**: *[BluetoothInterface](bluetoothinterface.md)*
 
 ___
 
-###  messageApi
+###  camera
 
-• **messageApi**: *[MessageInterface](messageinterface.md)*
-
-___
-
-###  storageApi
-
-• **storageApi**: *[StorageInterface](storageinterface.md)*
+• **camera**: *[CameraInterface](camerainterface.md)*
 
 ___
 
-###  webviewApi
+###  location
 
-• **webviewApi**: *[WebviewInterface](webviewinterface.md)*
+• **location**: *[LocationInterface](locationinterface.md)*
+
+___
+
+###  message
+
+• **message**: *[MessageInterface](messageinterface.md)*
+
+___
+
+###  storage
+
+• **storage**: *[StorageInterface](storageinterface.md)*
+
+___
+
+###  webview
+
+• **webview**: *[WebviewInterface](webviewinterface.md)*

@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.webviewApi = exports.storageApi = exports.messageApi = exports.locationApi = exports.cameraApi = exports.bluetoothApi = exports.appApi = void 0;
+exports.webview = exports.storage = exports.message = exports.location = exports.camera = exports.bluetooth = exports.app = exports.isWebviewApp = void 0;
 var app_1 = __importDefault(require("./mocked/app"));
 var bluetooth_1 = __importDefault(require("./mocked/bluetooth"));
 var camera_1 = __importDefault(require("./mocked/camera"));
@@ -18,21 +18,21 @@ var location_2 = __importDefault(require("./webview/location"));
 var message_2 = __importDefault(require("./webview/message"));
 var storage_2 = __importDefault(require("./webview/storage"));
 var webview_2 = __importDefault(require("./webview/webview"));
-var isApp = window["__WEBVIEW_API_APP__"] !== undefined;
-exports.appApi = isApp ? app_2.default : app_1.default;
-exports.bluetoothApi = isApp ? bluetooth_2.default : bluetooth_1.default;
-exports.cameraApi = isApp ? camera_2.default : camera_1.default;
-exports.locationApi = isApp ? location_2.default : location_1.default;
-exports.messageApi = isApp ? message_2.default : message_1.default;
-exports.storageApi = isApp ? storage_2.default : storage_1.default;
-exports.webviewApi = isApp ? webview_2.default : webview_1.default;
+exports.isWebviewApp = typeof __WEBVIEW_API_APP__ !== "undefined";
+exports.app = exports.isWebviewApp ? app_2.default : app_1.default;
+exports.bluetooth = exports.isWebviewApp ? bluetooth_2.default : bluetooth_1.default;
+exports.camera = exports.isWebviewApp ? camera_2.default : camera_1.default;
+exports.location = exports.isWebviewApp ? location_2.default : location_1.default;
+exports.message = exports.isWebviewApp ? message_2.default : message_1.default;
+exports.storage = exports.isWebviewApp ? storage_2.default : storage_1.default;
+exports.webview = exports.isWebviewApp ? webview_2.default : webview_1.default;
 var api = {
-    appApi: exports.appApi,
-    bluetoothApi: exports.bluetoothApi,
-    cameraApi: exports.cameraApi,
-    locationApi: exports.locationApi,
-    messageApi: exports.messageApi,
-    storageApi: exports.storageApi,
-    webviewApi: exports.webviewApi,
+    app: exports.app,
+    bluetooth: exports.bluetooth,
+    camera: exports.camera,
+    location: exports.location,
+    message: exports.message,
+    storage: exports.storage,
+    webview: exports.webview,
 };
 exports.default = api;

@@ -1,6 +1,7 @@
 import AppInterface from "../interfaces/app";
 
-const api = window["__WEBVIEW_API_APP__"];
+declare const __WEBVIEW_API_APP__: AppInterface;
+const api = __WEBVIEW_API_APP__;
 
 const appApi: AppInterface = {
   isWebviewApp(): boolean {

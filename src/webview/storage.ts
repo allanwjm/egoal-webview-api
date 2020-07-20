@@ -1,6 +1,7 @@
 import StorageInterface from "../interfaces/storage";
 
-const api = window["__WEBVIEW_API_STORAGE__"];
+declare const __WEBVIEW_API_STORAGE__: StorageInterface & {};
+const api = __WEBVIEW_API_STORAGE__;
 
 const storageApi: StorageInterface = {
   clear() {
