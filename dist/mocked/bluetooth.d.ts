@@ -1,3 +1,2 @@
 import BluetoothInterface from "../interfaces/bluetooth";
-declare const mockedBluetoothApi: BluetoothInterface;
-export default mockedBluetoothApi;
+export default function mockedBluetoothApi(): BluetoothInterface;

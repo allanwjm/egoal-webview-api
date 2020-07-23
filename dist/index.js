@@ -19,13 +19,13 @@ var message_2 = __importDefault(require("./webview/message"));
 var storage_2 = __importDefault(require("./webview/storage"));
 var webview_2 = __importDefault(require("./webview/webview"));
 exports.isWebviewApp = typeof __WEBVIEW_API_APP__ !== "undefined";
-exports.app = exports.isWebviewApp ? app_2.default : app_1.default;
-exports.bluetooth = exports.isWebviewApp ? bluetooth_2.default : bluetooth_1.default;
-exports.camera = exports.isWebviewApp ? camera_2.default : camera_1.default;
-exports.location = exports.isWebviewApp ? location_2.default : location_1.default;
-exports.message = exports.isWebviewApp ? message_2.default : message_1.default;
-exports.storage = exports.isWebviewApp ? storage_2.default : storage_1.default;
-exports.webview = exports.isWebviewApp ? webview_2.default : webview_1.default;
+exports.app = exports.isWebviewApp ? app_2.default() : app_1.default();
+exports.bluetooth = exports.isWebviewApp ? bluetooth_2.default() : bluetooth_1.default();
+exports.camera = exports.isWebviewApp ? camera_2.default() : camera_1.default();
+exports.location = exports.isWebviewApp ? location_2.default() : location_1.default();
+exports.message = exports.isWebviewApp ? message_2.default() : message_1.default();
+exports.storage = exports.isWebviewApp ? storage_2.default() : storage_1.default();
+exports.webview = exports.isWebviewApp ? webview_2.default() : webview_1.default();
 var api = {
     app: exports.app,
     bluetooth: exports.bluetooth,

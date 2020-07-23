@@ -1,3 +1,2 @@
 import StorageInterface from "../interfaces/storage";
-declare const storageApi: StorageInterface;
-export default storageApi;
+export default function storageApi(): StorageInterface;

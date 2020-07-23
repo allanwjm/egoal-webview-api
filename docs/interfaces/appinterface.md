@@ -56,7 +56,7 @@ ___
 
 ▸ **getBrightness**(): *number*
 
-获取当前屏幕亮度。
+获取当前屏幕亮度。\
 TODO: 该功能尚未实现。
 
 **Returns:** *number*
@@ -69,8 +69,8 @@ ___
 
 ▸ **getIMEI**(): *string*
 
-获取设备的 IMEI 码。
-如果无法获取 (如系统版本或权限问题), 返回 null。
+获取设备的 IMEI 码。\
+如果无法获取 (如系统版本或权限问题), 返回 null。\
 (!) 该方法返回的识别码可能因网络情况变化而变化。
 
 **Returns:** *string*
@@ -83,7 +83,7 @@ ___
 
 ▸ **getSerialNumber**(): *string*
 
-获取设备的序列号 (Serial Number)。
+获取设备的序列号 (Serial Number)。\
 如果无法获取 (如系统版本或权限问题), 返回 null。
 
 **Returns:** *string*
@@ -96,7 +96,7 @@ ___
 
 ▸ **getVolume**(): *number*
 
-获取当前音量。
+获取当前音量。\
 TODO: 该功能尚未实现。
 
 **Returns:** *number*
@@ -139,7 +139,7 @@ ___
 
 ▸ **setBrightness**(`brightness`: number): *void*
 
-设置屏幕亮度。
+设置屏幕亮度。\
 TODO: 该功能尚未实现。
 
 **Parameters:**
@@ -172,7 +172,7 @@ ___
 
 ▸ **setVolume**(`volume`: number): *void*
 
-设置音量。
+设置音量。\
 TODO: 该功能尚未实现。
 
 **Parameters:**

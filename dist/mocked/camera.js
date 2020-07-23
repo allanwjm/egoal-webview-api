@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var mockedCameraApi = {
-// TODO
-};
+function mockedCameraApi() {
+    return {
+    // TODO
+    };
+}
 exports.default = mockedCameraApi;
+;

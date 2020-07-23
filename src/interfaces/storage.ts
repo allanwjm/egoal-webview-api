@@ -1,5 +1,5 @@
 /**
- * 数据存储相关功能接口。
+ * 数据存储相关功能接口。\
  * 目前简单实现了键值对的存储, 暂只支持 string 类型, 可以自行转换为其它类型 (包括 JSON)。
  */
 export default interface StorageInterface {

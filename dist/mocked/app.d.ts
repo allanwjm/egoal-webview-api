@@ -1,3 +1,2 @@
 import AppInterface from "../interfaces/app";
-declare const mockedAppApi: AppInterface;
-export default mockedAppApi;
+export default function mockedAppApi(): AppInterface;

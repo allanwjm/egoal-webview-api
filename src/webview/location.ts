@@ -1,10 +1,11 @@
 import LocationInterface from "../interfaces/location";
 
-declare const __WEBVIEW_API_LOCATION__: LocationInterface & {};
-const api = __WEBVIEW_API_LOCATION__;
+declare const __WEBVIEW_API_LOCATION__: LocationInterface;
 
-const locationApi: LocationInterface = {
-  // TODO
+export default function locationApi(): LocationInterface {
+  const api = __WEBVIEW_API_LOCATION__;
+
+  return {
+    // TODO
+  };
 };
-
-export default locationApi;

@@ -1,3 +1,2 @@
 import MessageInterface from "../interfaces/message";
-declare const messageApi: MessageInterface;
-export default messageApi;
+export default function messageApi(): MessageInterface;

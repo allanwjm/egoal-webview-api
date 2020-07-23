@@ -1,3 +1,2 @@
 import BluetoothInterface from "../interfaces/bluetooth";
-declare const bluetoothApi: BluetoothInterface;
-export default bluetoothApi;
+export default function bluetoothApi(): BluetoothInterface;

@@ -1,24 +1,21 @@
 import MessageInterface from "../interfaces/message";
 
-declare const __WEBVIEW_API_MESSAGE__: MessageInterface & {};
-const api = __WEBVIEW_API_MESSAGE__;
+declare const __WEBVIEW_API_MESSAGE__: MessageInterface;
 
-const messageApi: MessageInterface = {
-  alert: window.alert,
-  confirm: window.confirm,
-  prompt: window.prompt,
+export default function messageApi(): MessageInterface {
+  const api = __WEBVIEW_API_MESSAGE__;
 
-  toast(message: string) {
-    api.toast(message);
-  },
+  return {
+    toast(message: string) {
+      api.toast(message);
+    },
 
-  dismissToast() {
-    api.dismissToast();
-  },
+    dismissToast() {
+      api.dismissToast();
+    },
 
-  beep() {
-    api.beep();
-  },
+    beep() {
+      api.beep();
+    },
+  };
 };
-
-export default messageApi;

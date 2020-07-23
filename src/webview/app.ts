@@ -1,60 +1,61 @@
 import AppInterface from "../interfaces/app";
 
 declare const __WEBVIEW_API_APP__: AppInterface;
-const api = __WEBVIEW_API_APP__;
 
-const appApi: AppInterface = {
-  isWebviewApp(): boolean {
-    return true;
-  },
+export default function appApi(): AppInterface {
+  const api = __WEBVIEW_API_APP__;
 
-  getIMEI(): string {
-    return api.getIMEI();
-  },
+  return {
+    isWebviewApp(): boolean {
+      return true;
+    },
 
-  getSerialNumber(): string {
-    return api.getSerialNumber();
-  },
+    getIMEI(): string {
+      return api.getIMEI();
+    },
 
-  getAppVersion(): string {
-    return api.getAppVersion();
-  },
+    getSerialNumber(): string {
+      return api.getSerialNumber();
+    },
 
-  getAppVersionCode(): number {
-    return api.getAppVersionCode();
-  },
+    getAppVersion(): string {
+      return api.getAppVersion();
+    },
 
-  restartApp() {
-    api.restartApp();
-  },
+    getAppVersionCode(): number {
+      return api.getAppVersionCode();
+    },
 
-  lockScreen() {
-    api.lockScreen();
-  },
+    restartApp() {
+      api.restartApp();
+    },
 
-  unlockScreen() {
-    api.unlockScreen();
-  },
+    lockScreen() {
+      api.lockScreen();
+    },
 
-  getBrightness() {
-    return api.getBrightness();
-  },
+    unlockScreen() {
+      api.unlockScreen();
+    },
 
-  setBrightness(brightness: number) {
-    api.setBrightness(brightness);
-  },
+    getBrightness() {
+      return api.getBrightness();
+    },
 
-  getVolume(): number {
-    return api.getVolume();
-  },
+    setBrightness(brightness: number) {
+      api.setBrightness(brightness);
+    },
 
-  setVolume(volume: number) {
-    api.setVolume(volume);
-  },
+    getVolume(): number {
+      return api.getVolume();
+    },
 
-  setStatusBarColor(color: string) {
-    api.setStatusBarColor(color);
-  },
+    setVolume(volume: number) {
+      api.setVolume(volume);
+    },
+
+    setStatusBarColor(color: string) {
+      api.setStatusBarColor(color);
+    },
+  };
 };
-
-export default appApi;

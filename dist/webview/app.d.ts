@@ -1,3 +1,2 @@
 import AppInterface from "../interfaces/app";
-declare const appApi: AppInterface;
-export default appApi;
+export default function appApi(): AppInterface;

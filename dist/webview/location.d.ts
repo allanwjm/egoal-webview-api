@@ -1,3 +1,2 @@
 import LocationInterface from "../interfaces/location";
-declare const locationApi: LocationInterface;
-export default locationApi;
+export default function locationApi(): LocationInterface;

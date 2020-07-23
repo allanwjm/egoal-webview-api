@@ -1,33 +1,34 @@
 import StorageInterface from "../interfaces/storage";
 
-declare const __WEBVIEW_API_STORAGE__: StorageInterface & {};
-const api = __WEBVIEW_API_STORAGE__;
+declare const __WEBVIEW_API_STORAGE__: StorageInterface;
 
-const storageApi: StorageInterface = {
-  clear() {
-    api.clear();
-  },
+export default function storageApi(): StorageInterface {
+  const api = __WEBVIEW_API_STORAGE__;
 
-  remove(key: string) {
-    api.remove(key);
-  },
+  return {
+    clear() {
+      api.clear();
+    },
 
-  exists(key: string): boolean {
-    return api.get(key) !== null;
-  },
+    remove(key: string) {
+      api.remove(key);
+    },
 
-  get(key: string, _default?: string): string {
-    const value = api.get(key);
-    if (value === null) {
-      return _default;
-    } else {
-      return value;
-    }
-  },
+    exists(key: string): boolean {
+      return api.get(key) !== null;
+    },
 
-  set(key: string, value: string) {
-    api.set(key, value);
-  },
+    get(key: string, _default?: string): string {
+      const value = api.get(key);
+      if (value === undefined || value === null) {
+        return _default;
+      } else {
+        return value;
+      }
+    },
+
+    set(key: string, value: string) {
+      api.set(key, value);
+    },
+  };
 };
-
-export default storageApi;

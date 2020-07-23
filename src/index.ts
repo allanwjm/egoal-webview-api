@@ -24,13 +24,13 @@ import webviewWebview from "./webview/webview";
 declare const __WEBVIEW_API_APP__;
 export const isWebviewApp = typeof __WEBVIEW_API_APP__ !== "undefined";
 
-export const app: AppInterface = isWebviewApp ? webviewApp : mockedApp;
-export const bluetooth: BluetoothInterface = isWebviewApp ? webViewBluetooth : mockedBluetooth;
-export const camera: CameraInterface = isWebviewApp ? webviewCamera : mockedCamera;
-export const location: LocationInterface = isWebviewApp ? webviewLocation : mockedLocation;
-export const message: MessageInterface = isWebviewApp ? webviewMessage : mockedMessage;
-export const storage: StorageInterface = isWebviewApp ? webviewStorage : mockedStorage;
-export const webview: WebviewInterface = isWebviewApp ? webviewWebview : mockedWebview;
+export const app: AppInterface = isWebviewApp ? webviewApp() : mockedApp();
+export const bluetooth: BluetoothInterface = isWebviewApp ? webViewBluetooth() : mockedBluetooth();
+export const camera: CameraInterface = isWebviewApp ? webviewCamera() : mockedCamera();
+export const location: LocationInterface = isWebviewApp ? webviewLocation() : mockedLocation();
+export const message: MessageInterface = isWebviewApp ? webviewMessage() : mockedMessage();
+export const storage: StorageInterface = isWebviewApp ? webviewStorage() : mockedStorage();
+export const webview: WebviewInterface = isWebviewApp ? webviewWebview() : mockedWebview();
 
 const api: EgoalWebviewApi = {
   app,

@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var mockedBluetoothApi = {
-// TODO
-};
+function mockedBluetoothApi() {
+    return {
+    // TODO
+    };
+}
 exports.default = mockedBluetoothApi;

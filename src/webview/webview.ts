@@ -1,28 +1,25 @@
 import WebviewInterface from "../interfaces/webview";
 
-declare const __WEBVIEW_API_WEBVIEW__: WebviewInterface & {};
-const api = __WEBVIEW_API_WEBVIEW__;
+declare const __WEBVIEW_API_WEBVIEW__: WebviewInterface;
 
-const webViewApi: WebviewInterface = {
-  reload() {
-    api.reload();
-  },
+export default function webViewApi() {
+  const api = __WEBVIEW_API_WEBVIEW__;
 
-  clearHistory() {
-    api.clearHistory();
-  },
+  return {
+    clearHistory() {
+      api.clearHistory();
+    },
 
-  testConnection(url: string): boolean {
-    return api.testConnection(url);
-  },
+    testConnection(url: string, timeout: number = 15000): boolean {
+      return api.testConnection(url, timeout);
+    },
 
-  gotoUrl(url: string) {
-    api.gotoUrl(url);
-  },
+    gotoUrl(url: string) {
+      api.gotoUrl(url);
+    },
 
-  gotoUrlAndClearHistory(url: string) {
-    api.gotoUrlAndClearHistory(url);
-  }
+    gotoUrlAndClearHistory(url: string) {
+      api.gotoUrlAndClearHistory(url);
+    }
+  };
 };
-
-export default webViewApi;

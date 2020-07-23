@@ -18,27 +18,23 @@ API 以库的形式发布在 GitHub 上，可以通过 `npm` 或 `yarn` 直接�
 # 安装
 yarn add https://github.com/allanwjm/egoal-webview-api.git
 
-# 升级版本 (即重新安装)
+# 升级版本 (即重新安装最新版本)
 yarn add https://github.com/allanwjm/egoal-webview-api.git --force
 ```
 
 安装后可以直接以 ES6 module 的形式导入。导入的路径为 `egoal-webview-api/dist`。
 ```javascript
-// 可以整体导入
+// 可以 default 整体导入
 import api from "egoal-webview-api/dist";
-const sn = api.appApi.getSerialNumber();
+const sn = api.app.getSerialNumber();
+api.message.toast("欢迎使用易高软件");
 
-// 或单独导入
-import {appApi} from "egoal-webview-api/dist";
-const sn = appApi.getSerialNumber();
+// 或单独导入需要的功能模块
+import {app, message} from "egoal-webview-api/dist";
+const sn = app.getSerialNumber();
+message.toast("欢迎使用易高软件");
 ```
 
 ### 开发用浏览器版接口
 为了方便开发，大多数接口也可以在浏览器 (而不是必须在 Android APP 中) 中进行调用，返回格式正确的虚拟返回值，并通过 `alert()` 或 `console` 等模拟一些事件。
 每次调用均会通过 `console.debug` 显示调用情况 (在 Chrome 中，显示为 `Verbose`)。
-
-### 更新记录
-
-- 2020/07/20 - `v0.0.9`
-  - 增加 `webviewApi.testConnection()` 接口
-  - 增加 `webviewApi.gotoUrlAndClearHistory()` 接口
