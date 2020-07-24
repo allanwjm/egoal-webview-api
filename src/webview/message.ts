@@ -1,8 +1,7 @@
 import MessageInterface from "../interfaces/message";
 
-declare const __WEBVIEW_API_MESSAGE__: MessageInterface;
-
 export default function messageApi(): MessageInterface {
+  // @ts-ignore
   const api = __WEBVIEW_API_MESSAGE__;
 
   return {

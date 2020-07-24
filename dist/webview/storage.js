@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function storageApi() {
+    // @ts-ignore
     var api = __WEBVIEW_API_STORAGE__;
     return {
         clear: function () {

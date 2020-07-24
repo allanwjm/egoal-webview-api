@@ -2,6 +2,12 @@
   "compilerOptions": {
     "declaration": true,
     "esModuleInterop": true,
+    "lib": [
+      "DOM",
+      "ES2015.Promise",
+      "ES5",
+      "ScriptHost"
+    ],
     "module": "commonjs",
     "outDir": "dist",
     "resolveJsonModule": true,

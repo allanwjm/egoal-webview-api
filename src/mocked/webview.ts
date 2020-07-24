@@ -7,10 +7,16 @@ export default function mockedWebviewApi(): WebviewInterface {
       console.debug("webviewApi.clearHistory()");
     },
 
-    testConnection(url: string, timeout: number): boolean {
+    testConnectionSync(url: string, timeout: number): boolean {
       console.error("在浏览器中不支持连接测试!");
-      console.debug("webviewApi.testConnection()");
+      console.debug(`webviewApi.testConnectionSync("${url}", ${timeout})`);
       return false;
+    },
+
+    testConnection(url: string, timeout?: number): Promise<boolean> {
+      console.error("在浏览器中不支持连接测试!");
+      console.debug(`webviewApi.testConnection("${url}", ${timeout})`);
+      return new Promise(resolve => resolve(false));
     },
 
     gotoUrl(url: string) {

@@ -16,6 +16,7 @@ Webview (浏览器组件) 相关功能。
 * [gotoUrl](webviewinterface.md#gotourl)
 * [gotoUrlAndClearHistory](webviewinterface.md#gotourlandclearhistory)
 * [testConnection](webviewinterface.md#testconnection)
+* [testConnectionSync](webviewinterface.md#testconnectionsync)
 
 ## Methods
 
@@ -64,11 +65,29 @@ ___
 
 ###  testConnection
 
-▸ **testConnection**(`url`: string, `timeout?`: number): *boolean*
+▸ **testConnection**(`url`: string, `timeout?`: number): *Promise‹boolean›*
+
+测试一个地址是否可以正常连接 (是否可以正常响应 HTTP GET 请求)。\
+(!) 此方法只在 Android APP 中有效。在浏览器中会直接返回 false。
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`url` | string | 要测试的页面 URL |
+`timeout?` | number | - |
+
+**Returns:** *Promise‹boolean›*
+
+___
+
+###  testConnectionSync
+
+▸ **testConnectionSync**(`url`: string, `timeout?`: number): *boolean*
 
 测试一个地址是否可以正常连接 (是否可以正常响应 HTTP GET 请求)。\
 (!) 此方法只在 Android APP 中有效。在浏览器中会直接返回 false。\
-(!) 此方法是同步的，会导致当前线程阻塞。请根据需要自行封装。
+(!) 此方法是同步的，会导致当前线程阻塞。
 
 **Parameters:**
 

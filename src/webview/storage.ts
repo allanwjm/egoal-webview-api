@@ -1,8 +1,7 @@
 import StorageInterface from "../interfaces/storage";
 
-declare const __WEBVIEW_API_STORAGE__: StorageInterface;
-
 export default function storageApi(): StorageInterface {
+  // @ts-ignore
   const api = __WEBVIEW_API_STORAGE__;
 
   return {

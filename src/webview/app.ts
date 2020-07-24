@@ -1,8 +1,7 @@
 import AppInterface from "../interfaces/app";
 
-declare const __WEBVIEW_API_APP__: AppInterface;
-
 export default function appApi(): AppInterface {
+  // @ts-ignore
   const api = __WEBVIEW_API_APP__;
 
   return {

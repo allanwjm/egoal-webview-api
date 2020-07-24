@@ -6,10 +6,15 @@ function mockedWebviewApi() {
             console.error("在浏览器中不支持清除历史记录!");
             console.debug("webviewApi.clearHistory()");
         },
+        testConnectionSync: function (url, timeout) {
+            console.error("在浏览器中不支持连接测试!");
+            console.debug("webviewApi.testConnectionSync(\"" + url + "\", " + timeout + ")");
+            return false;
+        },
         testConnection: function (url, timeout) {
             console.error("在浏览器中不支持连接测试!");
-            console.debug("webviewApi.testConnection()");
-            return false;
+            console.debug("webviewApi.testConnection(\"" + url + "\", " + timeout + ")");
+            return new Promise(function (resolve) { return resolve(false); });
         },
         gotoUrl: function (url) {
             window.location.href = url;

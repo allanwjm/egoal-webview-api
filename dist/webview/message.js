@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function messageApi() {
+    // @ts-ignore
     var api = __WEBVIEW_API_MESSAGE__;
     return {
         toast: function (message) {
