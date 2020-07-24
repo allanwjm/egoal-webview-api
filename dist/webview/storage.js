@@ -15,7 +15,7 @@ function storageApi() {
         },
         get: function (key, _default) {
             var value = api.get(key);
-            if (value === undefined || value === null) {
+            if (value === undefined) {
                 return _default;
             }
             else {

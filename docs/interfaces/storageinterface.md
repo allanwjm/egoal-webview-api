@@ -64,7 +64,7 @@ Name | Type | Description |
 
 **Returns:** *string*
 
-- 数据值, 或默认值, 或 undefined
+- 数据值, 或默认值, 或 `undefined` (当值不存在时)
 
 ___
 

@@ -25,7 +25,7 @@ export default interface StorageInterface {
    * 读取一条数据 (目前只支持 string 类型, 可自行转换其它类型)。
    * @param {string} key - 键
    * @param {string} _default - 数据不存在时的默认值
-   * @returns {string} - 数据值, 或默认值, 或 undefined
+   * @returns {string} - 数据值, 或默认值, 或 `undefined` (当值不存在时)
    */
   get(key: string, _default?: string): string;
 

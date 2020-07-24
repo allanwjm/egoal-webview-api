@@ -19,7 +19,7 @@ export default function storageApi(): StorageInterface {
 
     get(key: string, _default?: string): string {
       const value = api.get(key);
-      if (value === undefined || value === null) {
+      if (value === undefined) {
         return _default;
       } else {
         return value;
