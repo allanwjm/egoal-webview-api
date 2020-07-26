@@ -9,6 +9,7 @@
 * [AppInterface](interfaces/appinterface.md)
 * [BluetoothInterface](interfaces/bluetoothinterface.md)
 * [CameraInterface](interfaces/camerainterface.md)
+* [DeviceMetadata](interfaces/devicemetadata.md)
 * [EgoalWebviewApi](interfaces/egoalwebviewapi.md)
 * [LocationInterface](interfaces/locationinterface.md)
 * [MessageInterface](interfaces/messageinterface.md)

@@ -1,17 +1,11 @@
 import WebviewInterface from "../interfaces/webview";
-
-const testConnectionResolves: {[uuid: string]: Function} = {};
+import {pushResolve, simpleCallback} from "./callbacks";
 
 export default function webViewApi(): WebviewInterface {
   // @ts-ignore
   const api = __WEBVIEW_API_WEBVIEW__;
 
-  api.__CALLBACK_TEST_CONNECTION__ = function(uuid: string, result: boolean) {
-    const resolve = testConnectionResolves[uuid];
-    if (resolve) {
-      resolve(result);
-    }
-  };
+  api.__CALLBACK_TEST_CONNECTION__ = simpleCallback;
 
   return {
     clearHistory() {
@@ -25,7 +19,7 @@ export default function webViewApi(): WebviewInterface {
     testConnection(url: string, timeout: number = 15000): Promise<boolean> {
       return new Promise(resolve => {
         const uuid = api.testConnection(url, timeout);
-        testConnectionResolves[uuid] = resolve;
+        pushResolve(uuid, resolve);
       });
     },
 

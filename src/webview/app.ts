@@ -1,20 +1,35 @@
-import AppInterface from "../interfaces/app";
+import AppInterface, {DeviceMetadata} from "../interfaces/app";
+import {pushResolve, simpleCallback} from "./callbacks";
 
 export default function appApi(): AppInterface {
   // @ts-ignore
   const api = __WEBVIEW_API_APP__;
+
+  api.__CALLBACK_GET_IMEI__ = simpleCallback;
+  api.__CALLBACK_GET_SN__ = simpleCallback;
 
   return {
     isWebviewApp(): boolean {
       return true;
     },
 
-    getIMEI(): string {
-      return api.getIMEI();
+    getIMEI(method: number = 0): Promise<string | null> {
+      return new Promise(resolve => {
+        const uuid = api.getIMEI(method);
+        pushResolve(uuid, resolve);
+      });
     },
 
-    getSerialNumber(): string {
-      return api.getSerialNumber();
+    getSerialNumber(method: number = 0): Promise<string | null> {
+      return new Promise(resolve => {
+        const uuid = api.getSerialNumber(method);
+        pushResolve(uuid, resolve);
+      });
+    },
+
+    getDeviceMetadata(): DeviceMetadata {
+      const metadataJson = api.getDeviceMetadata();
+      return JSON.parse(metadataJson);
     },
 
     getAppVersion(): string {
@@ -27,6 +42,10 @@ export default function appApi(): AppInterface {
 
     restartApp() {
       api.restartApp();
+    },
+
+    quitApp() {
+      api.quitApp();
     },
 
     lockScreen() {

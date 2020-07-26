@@ -1,15 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var testConnectionResolves = {};
+var callbacks_1 = require("./callbacks");
 function webViewApi() {
     // @ts-ignore
     var api = __WEBVIEW_API_WEBVIEW__;
-    api.__CALLBACK_TEST_CONNECTION__ = function (uuid, result) {
-        var resolve = testConnectionResolves[uuid];
-        if (resolve) {
-            resolve(result);
-        }
-    };
+    api.__CALLBACK_TEST_CONNECTION__ = callbacks_1.simpleCallback;
     return {
         clearHistory: function () {
             api.clearHistory();
@@ -22,7 +17,7 @@ function webViewApi() {
             if (timeout === void 0) { timeout = 15000; }
             return new Promise(function (resolve) {
                 var uuid = api.testConnection(url, timeout);
-                testConnectionResolves[uuid] = resolve;
+                callbacks_1.pushResolve(uuid, resolve);
             });
         },
         gotoUrl: function (url) {

@@ -4,17 +4,17 @@ export default function mockedStorageApi(): StorageInterface {
   return {
     clear() {
       window.localStorage.clear();
-      console.debug("storageApi.clear()");
+      console.debug("storage.clear()");
     },
 
     remove(key: string) {
       window.localStorage.removeItem(key);
-      console.debug(`storageApi.remove(${key})`);
+      console.debug(`storage.remove(${key})`);
     },
 
     exists(key: string): boolean {
       const result = window.localStorage.getItem(key) !== null;
-      console.debug(`storageApi.exists(${key}): ${result}`);
+      console.debug(`storage.exists(${key}): ${result}`);
       return result;
     },
 
@@ -24,16 +24,16 @@ export default function mockedStorageApi(): StorageInterface {
         value = _default;
       }
       if (_default === undefined) {
-        console.debug(`storageApi.get(${key}): ${value}`);
+        console.debug(`storage.get(${key}): ${value}`);
       } else {
-        console.debug(`storageApi.get(${key}, ${_default}): ${value}`);
+        console.debug(`storage.get(${key}, ${_default}): ${value}`);
       }
       return value;
     },
 
     set(key: string, value: string) {
       window.localStorage.setItem(key, value);
-      console.debug(`storageApi.set(${key}, ${value})`);
+      console.debug(`storage.set(${key}, ${value})`);
     },
   };
 };

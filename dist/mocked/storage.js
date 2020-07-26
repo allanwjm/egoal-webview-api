@@ -4,15 +4,15 @@ function mockedStorageApi() {
     return {
         clear: function () {
             window.localStorage.clear();
-            console.debug("storageApi.clear()");
+            console.debug("storage.clear()");
         },
         remove: function (key) {
             window.localStorage.removeItem(key);
-            console.debug("storageApi.remove(" + key + ")");
+            console.debug("storage.remove(" + key + ")");
         },
         exists: function (key) {
             var result = window.localStorage.getItem(key) !== null;
-            console.debug("storageApi.exists(" + key + "): " + result);
+            console.debug("storage.exists(" + key + "): " + result);
             return result;
         },
         get: function (key, _default) {
@@ -21,16 +21,16 @@ function mockedStorageApi() {
                 value = _default;
             }
             if (_default === undefined) {
-                console.debug("storageApi.get(" + key + "): " + value);
+                console.debug("storage.get(" + key + "): " + value);
             }
             else {
-                console.debug("storageApi.get(" + key + ", " + _default + "): " + value);
+                console.debug("storage.get(" + key + ", " + _default + "): " + value);
             }
             return value;
         },
         set: function (key, value) {
             window.localStorage.setItem(key, value);
-            console.debug("storageApi.set(" + key + ", " + value + ")");
+            console.debug("storage.set(" + key + ", " + value + ")");
         },
     };
 }
